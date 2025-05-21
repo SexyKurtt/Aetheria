@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheria - Göksel Gizlilik Kalkanınız</title>
+    <meta name="description" content="Gizlilik odaklı, geçici e-posta adresi servisi. Zarif, güvenli ve anında kullanılabilir çözüm.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars-container">
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="star star-4"></div>
+        <div class="star star-5"></div>
+        <div class="star star-6"></div>
+    </div>
+    
+    <div class="nebula-bg"></div>
+    
+    <div class="constellation">
+        <svg viewBox="0 0 400 200" class="constellation-svg">
+            <path class="constellation-line" d="M80,50 L150,70 L220,40 L280,90 L350,60" />
+            <circle class="constellation-star" cx="80" cy="50" r="2" />
+            <circle class="constellation-star" cx="150" cy="70" r="3" />
+            <circle class="constellation-star" cx="220" cy="40" r="2" />
+            <circle class="constellation-star" cx="280" cy="90" r="4" />
+            <circle class="constellation-star" cx="350" cy="60" r="3" />
+        </svg>
+    </div>
+    
+    <div class="app-container">
+        <!-- Uygulama Başlığı -->
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="logo-animation">
+                    <svg class="logo-icon" viewBox="0 0 100 100" width="60" height="60">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#7e6cf5" />
+                                <stop offset="50%" stop-color="#c280d2" />
+                                <stop offset="100%" stop-color="#db9dc6" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle class="logo-orbit" cx="50" cy="50" r="40" fill="none" stroke="url(#logo-gradient)" stroke-width="1" />
+                        <circle class="logo-planet" cx="50" cy="10" r="5" fill="url(#logo-gradient)" filter="url(#glow)" />
+                        <circle class="logo-core" cx="50" cy="50" r="15" fill="url(#logo-gradient)" filter="url(#glow)" opacity="0.7" />
+                        <circle class="logo-ring" cx="50" cy="50" r="25" fill="none" stroke="url(#logo-gradient)" stroke-width="2" opacity="0.5" />
+                    </svg>
+                </div>
+                <h1 class="app-title">Aetheria</h1>
+            </div>
+            <p class="app-subtitle">Göksel Gizlilik Kalkanınız - Evrende bir nefesin anlık koruması</p>
+        </header>
+
+        <!-- Ana İçerik -->
+        <main class="app-main">
+            <!-- Geçici E-posta Oluşturma Alanı -->
+            <section class="create-email-section">
+                <button id="createEmailBtn" class="btn btn--stellar">
+                    <span class="btn-content">
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path class="icon-path" d="M12,2 L12,22 M2,12 L22,12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                        <span class="btn-text">Geçici Adres Oluştur</span>
+                    </span>
+                    <span class="btn-glow"></span>
+                </button>
+            </section>
+
+            <!-- E-posta Görüntüleme Alanı -->
+            <section id="emailDisplay" class="email-display-card">
+                <div class="card-inner">
+                    <div class="email-display__placeholder">
+                        <svg class="celestial-icon" viewBox="0 0 50 50" width="80" height="80">
+                            <defs>
+                                <linearGradient id="envelope-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7e6cf5" />
+                                    <stop offset="100%" stop-color="#c280d2" />
+                                </linearGradient>
+                                <filter id="envelope-glow">
+                                    <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <path d="M45,10L25,25L5,10V40H45V10zM45,5H5V8L25,23L45,8V5z" fill="url(#envelope-gradient)" filter="url(#envelope-glow)" />
+                        </svg>
+                        <p class="placeholder-text">Yukarıdaki "Geçici Adres Oluştur" butonuna tıklayarak gizlilik sferinizi yaratın.</p>
+                    </div>
+                    
+                    <div class="email-display__content">
+                        <div class="email-display__group">
+                            <div class="email-display__label">
+                                <svg class="icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path d="M21,5H3C1.9,5,1,5.9,1,7v10c0,1.1,0.9,2,2,2h18c1.1,0,2-0.9,2-2V7C23,5.9,22.1,5,21,5z M21,7v2l-8,4.99L5,9V7H21z M3,17V9l8,5l8-5v8H3z" fill="currentColor"/>
+                                </svg>
+                                <span>Kozmik Adresiniz</span>
+                            </div>
+                            <div class="email-display__value">
+                                <span id="emailAddress">-</span>
+                                <button id="copyEmailBtn" class="crystal-btn" title="Kopyala">
+                                    <svg class="icon" viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M16,1H4C2.9,1,2,1.9,2,3v14h2V3h12V1z M19,5H8C6.9,5,6,5.9,6,7v14c0,1.1,0.9,2,2,2h11c1.1,0,2-0.9,2-2V7C21,5.9,20.1,5,19,5z M19,21H8V7h11V21z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="email-display__group">
+                            <div class="email-display__label">
+                                <svg class="icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path d="M18,8h-1V6c0-2.76-2.24-5-5-5S7,3.24,7,6v2H6c-1.1,0-2,0.9-2,2v10c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V10C20,8.9,19.1,8,18,8z M12,17c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2S13.1,17,12,17z M15.1,8H8.9V6c0-1.71,1.39-3.1,3.1-3.1s3.1,1.39,3.1,3.1V8z" fill="currentColor"/>
+                                </svg>
+                                <span>Astral Anahtarınız</span>
+                            </div>
+                            <div class="email-display__value">
+                                <span id="emailPassword">-</span>
+                                <button id="copyPasswordBtn" class="crystal-btn" title="Kopyala">
+                                    <svg class="icon" viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M16,1H4C2.9,1,2,1.9,2,3v14h2V3h12V1z M19,5H8C6.9,5,6,5.9,6,7v14c0,1.1,0.9,2,2,2h11c1.1,0,2-0.9,2-2V7C21,5.9,20.1,5,19,5z M19,21H8V7h11V21z" fill="currentColor"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gelen Kutusu -->
+            <section class="inbox-card">
+                <header class="inbox-header">
+                    <div class="inbox-title">
+                        <svg class="inbox-icon" viewBox="0 0 24 24" width="22" height="22">
+                            <path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M19,19H5V5h14V19z M13,17h2V7h-4v2h2V17z" fill="currentColor"/>
+                        </svg>
+                        <span>Astral İletiler</span>
+                    </div>
+                    <div class="inbox-actions">
+                        <span id="inboxStatus" class="inbox-status">Henüz bir e-posta adresi oluşturulmadı</span>
+                        <button id="refreshBtn" class="btn btn--crystalline" title="Yenile">
+                            <svg class="refresh-icon" viewBox="0 0 24 24" width="18" height="18">
+                                <path d="M17.65,6.35C16.2,4.9,14.21,4,12,4c-4.42,0-7.99,3.58-7.99,8s3.57,8,7.99,8c3.73,0,6.84-2.55,7.73-6h-2.08 c-0.82,2.33-3.04,4-5.65,4c-3.31,0-6-2.69-6-6s2.69-6,6-6c1.66,0,3.14,0.69,4.22,1.78L13,10h7V3L17.65,6.35z" fill="currentColor"/>
+                            </svg>
+                            <span>Yenile</span>
+                        </button>
+                    </div>
+                </header>
+                
+                <div class="inbox-content">
+                    <div id="loader" class="celestial-loader">
+                        <div class="loader-orbit">
+                            <div class="loader-planet"></div>
+                        </div>
+                        <div class="loader-core"></div>
+                    </div>
+                    
+                    <div id="emptyInbox" class="empty-inbox">
+                        <div class="empty-state-animation">
+                            <svg class="empty-inbox-icon" viewBox="0 0 100 100" width="100" height="100">
+                                <defs>
+                                    <linearGradient id="empty-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#7e6cf5" />
+                                        <stop offset="100%" stop-color="#c280d2" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="empty-orbit" cx="50" cy="50" r="40" fill="none" stroke="url(#empty-gradient)" stroke-width="1" />
+                                <circle class="empty-planet" cx="50" cy="10" r="4" fill="url(#empty-gradient)" />
+                                <path class="empty-envelope" d="M65,40H35c-1.1,0-2,0.9-2,2v20c0,1.1,0.9,2,2,2h30c1.1,0,2-0.9,2-2V42C67,40.9,66.1,40,65,40z M65,44v2L50,54L35,46v-2H65z M35,62V48l15,8l15-8v14H35z" fill="url(#empty-gradient)" />
+                            </svg>
+                        </div>
+                        <div class="empty-inbox__text">
+                            <h3>Astral Posta Kutunuz Boş</h3>
+                            <p>Henüz gelen iletiniz yok. Mesajlar eterik boyuttan ulaştığında burada görünecek.</p>
+                        </div>
+                    </div>
+                    
+                    <ul id="messageList" class="message-list"></ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Mesaj Detay Modal -->
+        <div id="messageDetail" class="message-detail">
+            <div class="message-detail__overlay"></div>
+            <div class="message-detail__content">
+                <button id="closeDetailBtn" class="close-detail-btn">
+                    <svg class="icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41z" fill="currentColor"/>
+                    </svg>
+                </button>
+                
+                <div class="message-detail__header">
+                    <h2 id="detailSubject" class="message-detail__subject">Mesaj Başlığı</h2>
+                    <div class="message-detail__meta">
+                        <div class="message-detail__meta-label">Gönderen:</div>
+                        <div id="detailFrom" class="message-detail__meta-value">gönderen@adres.com</div>
+                        
+                        <div class="message-detail__meta-label">Alıcı:</div>
+                        <div id="detailTo" class="message-detail__meta-value">alici@adres.com</div>
+                        
+                        <div class="message-detail__meta-label">Zaman:</div>
+                        <div id="detailDate" class="message-detail__meta-value">01.01.2023 12:00</div>
+                    </div>
+                </div>
+                
+                <div class="message-detail__body">
+                    <iframe id="messageIframe" class="message-iframe"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Bildirimi -->
+        <div id="toast" class="celestial-toast">
+            <div class="toast-icon-container">
+                <svg class="toast-icon" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+                </svg>
+            </div>
+            <div id="toastContent" class="toast__content"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
